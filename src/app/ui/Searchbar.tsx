@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-export const Searchbar = () => {
+export const Searchbar = ({ placeholder }: { placeholder: string }) => {
   return (
-    <div className="flex gap-2 w-5/6 mb-8">
+    <div className="flex gap-4 w-5/6 mb-8">
       <Image
         src="/assets/icon-search.svg"
         alt="search-icon"
@@ -14,7 +14,7 @@ export const Searchbar = () => {
       <input
         type="text"
         id="search-input"
-        placeholder="Search for movies or TV series"
+        placeholder={placeholder}
         className="w-full"
       ></input>
     </div>

@@ -1,7 +1,8 @@
 import React from 'react'
+import { MediaCategory } from '@/app/ui/MediaCategory'
 
 export default function Page() {
   return (
-    <div>Page</div>
+    <MediaCategory categoryTitle="TV Series" apiType="tv"></MediaCategory>
   )
 }

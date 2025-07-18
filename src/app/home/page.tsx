@@ -1,12 +1,12 @@
 import React from 'react'
 import Trending from "@/app/ui/Trending";
-import Recommended from '../ui/Recommended';
+import { MediaCategory } from '../ui/MediaCategory';
 
 export default function Page() {
   return (
     <div className="flex flex-col gap-6">
       <Trending></Trending>
-      <Recommended></Recommended>
+      <MediaCategory categoryTitle="Recommended for you" apiType="recommended"></MediaCategory>
     </div>
   )
 }
