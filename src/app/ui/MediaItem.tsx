@@ -44,7 +44,7 @@ export const MediaItem = ({
         <span>{mediaType}</span> •
         <span>{rating}</span>
       </div>
-      <h3 className="text-lg md:text-xl lg:text-2xl">{displayName}</h3>
+      <h3 className="text-lg md:text-xl">{displayName}</h3>
     </div>
   );
 };
