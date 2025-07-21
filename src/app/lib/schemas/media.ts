@@ -7,7 +7,7 @@ export const mediaSchema = z.object({
   media_type: z.string().optional(),
   id: z.number(),
   title: z.string().optional(),
-  backdrop_path: z.string(),
+  backdrop_path: z.string().optional().nullable(),
   name: z.string().optional(),
 });
 

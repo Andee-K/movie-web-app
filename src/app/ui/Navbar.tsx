@@ -10,7 +10,7 @@ function Navbar() {
   const pathName = usePathname();
   
   return (
-    <div className="flex items-center w-full p-4 bg-dark-blue z-50 top-0 md:rounded-xl md:w-[98%] md:mx-auto md:mt-4 md:static lg:w-24 lg:m-4 lg:my-8 lg:flex-col lg:h-[92vh]">
+    <nav className="flex items-center w-full p-4 bg-dark-blue z-50 top-0 md:rounded-xl md:w-[98%] md:mx-auto md:mt-4 md:static lg:w-24 lg:m-4 lg:my-8 lg:flex-col lg:h-[92vh]">
       <div className="flex justify-between w-full lg:flex-col lg:h-full lg:items-center lg:py-2">
         <Image
           src="/assets/logo.svg"
@@ -95,7 +95,7 @@ function Navbar() {
           className="object-contain"
         ></Image>
       </div>
-    </div>
+    </nav>
   );
 }
 

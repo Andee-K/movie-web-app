@@ -2,6 +2,7 @@ import { MediaList, mediaSchemaList, ApiCallType, Media, DisplayMedia } from "./
 
 const baseUrl="https://api.themoviedb.org/3/";
 
+// Server component
 export async function fetchMedia(media_type: ApiCallType): Promise<MediaList> {
   let api_type = ""
 
@@ -28,7 +29,6 @@ export async function fetchMedia(media_type: ApiCallType): Promise<MediaList> {
 
     const data = await response.json();
     const parsedData = mediaSchemaList.parse(data.results ?? []);
-    // console.log(parsedData);
     return parsedData;
   } catch (error) {
     console.error("fetchMedia error:", error);
