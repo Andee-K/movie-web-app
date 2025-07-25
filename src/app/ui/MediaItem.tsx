@@ -13,15 +13,20 @@ export const MediaItem = ({
 }: DisplayMedia) => {
   return (
     <div className="flex flex-col gap-2">
-      <div className="relative">
-        <Image
-          src={imageSrc}
-          alt="media-image"
-          width={164}
-          height={110}
-          className="w-full h-auto object-cover rounded-lg transition-transform group-hover:scale-105"
-        />
-        <button className="absolute top-2 right-2 grid place-items-center w-8 h-8 rounded-full bg-darkest-blue/50">
+      <div className="relative w-full aspect-[164/110]">
+        {imageSrc && !imageSrc.endsWith("null") ? (
+          <Image
+            src={imageSrc}
+            alt="media-image"
+            fill
+            className="object-cover rounded-lg transition-transform group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-lg">
+            <span className="text-xs text-gray-400">Poster not available</span>
+          </div>
+        )}
+        {/* <button className="absolute top-2 right-2 grid place-items-center w-8 h-8 rounded-full bg-darkest-blue/50">
           <Image
             src="/assets/icon-bookmark-empty.svg"
             width={12}
@@ -29,7 +34,7 @@ export const MediaItem = ({
             alt="bookmark-icon"
             className="opacity-100"
           />
-        </button>
+        </button> */}
       </div>
 
       <div className="flex gap-2 mb-1 opacity-75 font-light text-xs md:text-lg">

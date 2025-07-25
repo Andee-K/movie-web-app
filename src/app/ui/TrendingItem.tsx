@@ -21,7 +21,7 @@ const TrendingItem = ({ title, release_date, media_type, backdrop_path, adult }:
       className="flex flex-col justify-end relative p-4 bg-cover w-[240px] h-[140px] rounded-lg"
       style={{ backgroundImage: `url(${basePath})` }}
     >
-      <button className="grid place-items-center absolute top-2 right-2 bg-darkest-blue/50 w-8 h-8 rounded-full">
+      {/* <button className="grid place-items-center absolute top-2 right-2 bg-darkest-blue/50 w-8 h-8 rounded-full">
         <img
           src="./assets/icon-bookmark-empty.svg"
           width={12}
@@ -29,7 +29,7 @@ const TrendingItem = ({ title, release_date, media_type, backdrop_path, adult }:
           alt="bookmark-icon"
           className="opacity-100"
         ></img>
-      </button>
+      </button> */}
       <div className="flex gap-2 mb-1 opacity-75 font-light text-xs">
         <span>{year ? year : "N/A"}</span> •
         <Image
